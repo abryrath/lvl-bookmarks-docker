@@ -41,6 +41,12 @@ services:
       networks:
           testing_net:
               ipv4_address: 172.28.1.4
+    frontend:
+      build: docker/frontend
+      container_name: ${PROJECT_NAME}-frontend
+      working_dir: /application
+      volumes:
+        - ./application:/application
 networks:
     testing_net:
         ipam:

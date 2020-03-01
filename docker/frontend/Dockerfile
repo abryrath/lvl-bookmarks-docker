@@ -26,4 +26,4 @@ ENV PATH $VERSION_PATH:$PATH
 # Install Yarn
 RUN curl -o- -L https://yarnpkg.com/install.sh | bash
 
-CMD yarn install && yarn dev
+CMD /bin/bash -c "yarn install && yarn dev"

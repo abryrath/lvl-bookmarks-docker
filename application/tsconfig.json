@@ -1,11 +1,18 @@
 
 {
     "compilerOptions": {
-        "module": "commonjs",
+        "module": "es2015",
         "target": "es5",
-        "noImplicitAny": false,
-        "sourceMap": false,
-        "experimentalDecorators": true
+        "noImplicitAny": true,
+        "noImplicitThis": true,
+        "noImplicitReturns": true,
+        "sourceMap": true,
+        "experimentalDecorators": true,
+        "moduleResolution": "node",
+        "lib": [
+            "ES2015",
+            "DOM"
+        ]
     },
     "include": [
         "resources/js/**/*"

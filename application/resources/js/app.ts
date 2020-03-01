@@ -4,9 +4,14 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-require('./bootstrap');
+// require('./bootstrap');
 
-window.Vue = require('vue');
+import Bookmark from './components/Bookmark.vue';
+import BookmarkForm from './components/BookmarkForm.vue';
+import Vue from 'vue';
+
+window.Vue = Vue;
+// window.Vue = require('vue');
 
 /**
  * The following block of code may be used to automatically register your
@@ -19,7 +24,8 @@ window.Vue = require('vue');
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-Vue.component('bookmark', require('./components/Bookmark.vue').default);
+Vue.component('bookmark', Bookmark);
+Vue.component('bookmark-form', BookmarkForm);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

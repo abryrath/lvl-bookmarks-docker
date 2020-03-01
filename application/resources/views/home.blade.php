@@ -14,7 +14,14 @@
                         </div>
                     @endif
 
+                <div>
+                    @include ('forms/new-bookmark')
+                </div>
+
                     You are logged in!
+                    @foreach ($user->bookmarks() as $bookmark)
+                        <bookmark id="1" site="https://laravel.com"/>
+                    @endforeach
                 </div>
             </div>
         </div>

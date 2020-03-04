@@ -1,1 +1,1 @@
-<bookmark-form user-id="{{ $user->id }}" action="{{ route('new-bookmark') }}" />
+<bookmark-form user-token="{{ $user->api_token }}" action="{{ route('new-bookmark') }}" />

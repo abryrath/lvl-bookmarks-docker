@@ -1,5 +1,5 @@
 <template>
-    <div>Bookmark</div>
+    <div>Bookmark [id: {{ this.id }}]</div>
 </template>
 
 <script lang="ts">
@@ -8,7 +8,8 @@ import { Vue, Component } from 'vue-property-decorator';
 const BookmarkProps = Vue.extend({
     props: {
         id: String,
-        site: String
+        title: String,
+        url: String,
     }
 });
 

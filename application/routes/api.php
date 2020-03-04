@@ -18,8 +18,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::middleware('auth:api')
-    ->get('/api/bookmarks', 'BookmarksController@index')
+    ->get('/bookmarks', 'BookmarksController@index')
     ->name('bookmarks');
 Route::middleware('auth:api')
-    ->post('/api/bookmarks/create', 'BookmarksController@create')
+    ->post('/bookmarks/create', 'BookmarksController@create')
     ->name('new-bookmark');

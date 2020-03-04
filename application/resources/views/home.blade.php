@@ -19,8 +19,8 @@
                 </div>
 
                     You are logged in!
-                    @foreach ($user->bookmarks() as $bookmark)
-                        <bookmark id="1" site="https://laravel.com"/>
+                    @foreach ($user->bookmarks as $bookmark)
+                        <bookmark :key="{{ $bookmark->id }}" id="{{ $bookmark->id }}" title="{{ $bookmark->title }}" url="{{ $bookmark->url }}" user="{{ $bookmark->user->id }}"/>
                     @endforeach
                 </div>
             </div>

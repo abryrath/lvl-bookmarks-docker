@@ -8,6 +8,7 @@
 
 import Bookmark from './components/Bookmark.vue';
 import BookmarkForm from './components/BookmarkForm.vue';
+import BookmarksList from './components/BookmarksList.vue';
 import Vue from 'vue';
 
 window.Vue = Vue;
@@ -26,6 +27,7 @@ window.Vue = Vue;
 
 Vue.component('bookmark', Bookmark);
 Vue.component('bookmark-form', BookmarkForm);
+Vue.component('bookmarks-list', BookmarksList);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

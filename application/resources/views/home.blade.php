@@ -19,9 +19,8 @@
                 </div>
 
                     You are logged in!
-                    @foreach ($user->bookmarks as $bookmark)
-                        <bookmark :key="{{ $bookmark->id }}" id="{{ $bookmark->id }}" title="{{ $bookmark->title }}" url="{{ $bookmark->url }}" user="{{ $bookmark->user->id }}"/>
-                    @endforeach
+                    <bookmarks-list bookmarks="{{ $user->bookmarks }}" refresh-url="{{ route('bookmarks.index') }}">
+                    </bookmarks-list>
                 </div>
             </div>
         </div>

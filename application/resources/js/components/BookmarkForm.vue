@@ -16,7 +16,7 @@
 
 <script lang="ts">
 import { Vue, Component } from "vue-property-decorator";
-import axios from "axios";
+import api from '../api.ts';
 
 const BookmarkFormProps = Vue.extend({
   props: {
@@ -38,8 +38,8 @@ export default class BookmarkForm extends BookmarkFormProps {
   }
 
   submit() {
-    const url = `${this.$props.action}?api_token=${this.$props.userToken}`;
-    axios.post(url, {
+    const url = this.$props.action;
+    api.post(url, {
       title: this.title,
       url: this.url
     });

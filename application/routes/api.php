@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,13 +14,10 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::middleware('auth:api')->group(function () {
+    Route::get('/user', function (Request $request) {
+        return $request->user();
+    });
 
-Route::middleware('auth:api')
-    ->get('/bookmarks', 'BookmarksController@index')
-    ->name('bookmarks');
-Route::middleware('auth:api')
-    ->post('/bookmarks/create', 'BookmarksController@create')
-    ->name('new-bookmark');
+    Route::apiResource('bookmarks', 'Api\BookmarksController');
+});
